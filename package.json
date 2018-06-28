@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-atomizer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Use Atomizer to generate Atomic CSS from your ember templates.",
   "author": "Aleksey Nagovitsyn <al3x.nag@gmail.com>",
   "license": "MIT",
