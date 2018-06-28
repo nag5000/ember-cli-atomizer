@@ -1,7 +1,8 @@
 ember-cli-atomizer
 ==============================================================================
 
-[Short description of the addon.]
+Use [Atomizer](https://github.com/acss-io/atomizer) to generate
+[Atomic CSS](http://acss.io/) from your ember templates.
 
 Installation
 ------------------------------------------------------------------------------
@@ -14,37 +15,25 @@ ember install ember-cli-atomizer
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+By default this addon will process `app/templates/**/*.hbs` to generate 
+Atomic CSS rules using `atomizer`. Generated css will be imported into 
+`vendor.css`.
 
 
-Contributing
-------------------------------------------------------------------------------
+You can specify options using the `ember-cli-atomizer` config property
+in `ember-cli-build.js`:
+```js
+  'ember-cli-atomizer': {
+    // Directory or directories of templates.
+    // 'app/templates' by default.
+    dir: <string|string[]>,
 
-### Installation
+    // Pattern to match template files. [Glob](https://github.com/isaacs/node-glob) is used.
+    // '**/*.hbs' by default.
+    pattern: <string>,
 
-* `git clone <repository-url>`
-* `cd ember-cli-atomizer`
-* `npm install`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Running tests
-
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `npm test` – Runs `ember try:each` to test your addon against multiple Ember versions
-
-### Running the dummy application
-
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
-
-License
-------------------------------------------------------------------------------
-
-This project is licensed under the [MIT License](LICENSE.md).
+    // [Atomizer](https://github.com/acss-io/atomizer) config (optional). [example-config.js](https://github.com/acss-io/atomizer/blob/master/examples/example-config.js)
+    // `undefined` by default.
+    config: <object>
+  }
+```
