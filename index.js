@@ -32,7 +32,7 @@ AtomizerCompiler.prototype.build = function() {
   // Make shallow copy to avoid mutation of `options.config` in
   // `atomizer.getConfig` func: https://git.io/f4dyl.
   // Otherwise, the result of the second compilation will be incorrect.
-  let defaultConfig = { ... this.options.config };
+  let defaultConfig = Object.assign({}, this.options.config);
   let config = atomizer.getConfig(foundClasses, defaultConfig);
   let css = atomizer.getCss(config);
 
