@@ -1,5 +1,6 @@
 ember-cli-atomizer
 ==============================================================================
+[![npm version](https://badge.fury.io/js/ember-cli-atomizer.svg)](https://badge.fury.io/js/ember-cli-atomizer)
 
 Use [Atomizer](https://github.com/acss-io/atomizer) to generate
 [Atomic CSS](http://acss.io/) from your ember templates.
@@ -28,11 +29,12 @@ in `ember-cli-build.js`:
     // 'app/templates' by default.
     dir: <string|string[]>,
 
-    // Pattern to match template files. [Glob](https://github.com/isaacs/node-glob) is used.
+    // Pattern to match template files. 
+    // https://github.com/isaacs/node-glob is used.
     // '**/*.hbs' by default.
     pattern: <string>,
 
-    // [Atomizer](https://github.com/acss-io/atomizer) config (optional). [example-config.js](https://github.com/acss-io/atomizer/blob/master/examples/example-config.js)
+    // Atomizer config (optional).
     // `undefined` by default.
     config: <object>
   }
